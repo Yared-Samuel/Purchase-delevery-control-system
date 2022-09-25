@@ -112,12 +112,12 @@ include_once '../header.php';
 
 <script>
 $(document).ready(function() {
-  $('#producttable').DataTable({
+  $('#del').DataTable({
     "order": [
       [2, "desc"]
     ],
-    dom: 'Bfrtip',
-    buttons: [
+    dom: 'lBfrtip',
+    buttons: [ 
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
   });

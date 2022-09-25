@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>GGW PDCS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   
@@ -24,46 +24,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!-- iCheck -->
-<script src="../plugins/iCheck/icheck.min.js"></script>
+<script src="../bower_components/plugins/iCheck/icheck.min.js"></script>
 
 <script src="../bower_components/sweetalert/sweetalert.js" ></script>
 
 
 <!-- DataTables -->
-
-
-
-<!-- <link rel="stylesheet" type="text/css" href="DataTables_2/datatables.css"/> 
-<link rel="stylesheet" type="text/css" href="DataTables_2/jquery.dataTables.min.css"/> 
-  <script type="text/javascript" src="DataTables_2/datatables.js"></script>
-  
-  <script type="text/javascript" src="DataTables_2/jquery.dataTables.min.css"></script>
-  <script type="text/javascript" src="DataTables_2/jquery.dataTables.min.js"></script> -->
-
- <!-- <link rel="stylesheet" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/dataTables.jqueryui.min.css"/>
-  
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/dataTables.jqueryui.min.js"></script> -->
-
-
-
-
-<link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/datatables.bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/datatables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/buttons.dataTables.min.css">  
 <link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/jquery.dataTables.min.css">
-
-
-
-
-   
-  
-  
-        <!-- end -->
+<link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/buttons.dataTables.min.css"> 
+<!-- end -->
 
 
 <!-- Select2 -->
@@ -75,12 +47,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Ionicons -->
   <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">  
+  <link rel="stylesheet" href="../bower_components/dist/css/AdminLTE.min.css">  
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
-  <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
-  <link rel="stylesheet/less" href="../build/less/sidebar.less" />
+  <link rel="stylesheet" href="../bower_components/dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet/less" href="../bower_components/build/less/sidebar.less">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -105,10 +77,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 
 <!-- iCheck for checkboxes and radio inputs -->
-<link rel="stylesheet" href="../plugins/iCheck/all.css">
-
-
-
+<link rel="stylesheet" href="../bower_components/plugins/iCheck/all.css">
 <script src="../bower_components/select2/dist/js/select2.full.min.js"></script>
 
 
@@ -175,7 +144,7 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="../bower_components/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -260,14 +229,14 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../bower_components/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="../bower_components/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -309,8 +278,7 @@ desired effect
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-
+  <aside class="main-sidebar ">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar Menu -->

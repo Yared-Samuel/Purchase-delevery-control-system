@@ -5,7 +5,7 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2020 <a href="#">Yared Samuel</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -94,7 +94,7 @@
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../dist/js/adminlte.min.js"></script>
+<script src="../bower_components/dist/js/adminlte.min.js"></script>
 
 
 <!-- DataTables -->

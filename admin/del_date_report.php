@@ -191,7 +191,7 @@ filter_total_item_bydate();
 <script>
 $(document).ready( function () {
     $('#del').DataTable( {
-        dom: 'Bfrtip',
+        dom: 'lBfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]

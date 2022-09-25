@@ -218,10 +218,10 @@ $(document).ready(function() {
     "order": [
       [3, "desc"]
     ],
-    // dom: 'Bfrtip',
-    // buttons: [
-    //         'copy', 'csv', 'excel', 'pdf', 'print'
-    //     ]
+    dom: 'lBfrtip',
+    buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
   });
 });
 

@@ -205,9 +205,17 @@ add_payment();
 </div>
 
 <script>
-$(document).ready( function () {
-    $('#paytbl').DataTable();
-} );
+$(document).ready(function() {
+  $('#paytbl').DataTable({
+    "order": [
+      [4, "desc"]
+    ],
+    dom: 'lBfrtip',
+    buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+  });
+});
 </script>
 
   <?php

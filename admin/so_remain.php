@@ -42,7 +42,7 @@ include_once '../header.php';
 <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> Partialy Delevered Sales Orders</div>
 
   <div class="box box-info"></div>
-        <table id="deleverytbl" class="table table-sm hover cell-border compact stripe display"  >
+        <table id="so_rem" class="table table-sm hover cell-border compact stripe display"  >
   <thead style="background-color: gray; font-size: 100%; color: white;">
               <tr>
                 <th>#</th>
@@ -99,10 +99,10 @@ include_once '../header.php';
 
 
       <div class="box box-info">
-<div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> New Sales Orders</div>
-  <div class="box box-info"></div>
-        <table id="deleverytbl" class="table table-sm hover cell-border compact stripe display"  >
-  <thead style="background-color: gray; font-size: 100%; color: white;">
+      <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> New Sales Orders</div>
+      <div class="box box-info"></div>
+      <table id="so_rem" class="table table-sm hover cell-border compact stripe display"  >
+        <thead style="background-color: gray; font-size: 100%; color: white;">
               <tr>
                 <th class="col-md-2">#</th>
                 <th class="col-md-2">Product Name</th>
@@ -158,10 +158,19 @@ include_once '../header.php';
 
 <script>
 $(document).ready( function () {
-    $('#deleverytbl').DataTable();
+    $('#so_rem').DataTable( {
+        dom: 'lBfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    }
+      
+      
+  
+    );
+    
 } );
 </script>
-
   <?php
 
 include_once '../footer.php';
