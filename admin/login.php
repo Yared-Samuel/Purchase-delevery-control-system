@@ -1,9 +1,27 @@
+<?php
+include_once '../includes/session.php';
+include_once '../includes/connection.php';
+include_once '../includes/functions.php';
+
+if (isset($_POST["submit"])) {
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+  if(empty($username) || empty($password)){
+    redirect_to("login.php");
+  }else{
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+    
+    
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title>PDCS | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -13,9 +31,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../bower_components/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="../bower_components/plugins/iCheck/square/blue.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,10 +54,10 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="../includes/userLogin.php" method="post">
+    <form action="#" method="post">
       <div class="form-group has-feedback">
 
-        <input type="email" class="form-control" placeholder="Email" name="email">
+        <input type="text" class="form-control" placeholder="user name" name="username">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -51,7 +69,7 @@
         <!-- /.col -->
         <div class="col-xs-4">
 
-          <button type="submit" class="btn btn-primary btn-block btn-flat" name="login_btn">LOG in</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat" name="submit">LOG in</button>
         </div>
         <!-- /.col -->
       </div>
