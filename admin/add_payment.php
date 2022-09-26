@@ -1,11 +1,15 @@
 <?php
+ob_start();
 include_once '../includes/session.php';
 include_once '../header.php';
 include_once '../includes/connection.php';
 include_once '../includes/functions.php';
 
-
-add_payment();
+if (!isset($_SESSION['username']) || $_SESSION['role'] != "admin") {
+  header("location:../index.php");
+}
+add_payment(); 
+ob_end_flush();
 ?>
 
 
@@ -219,11 +223,5 @@ $(document).ready(function() {
 </script>
 
   <?php
-
-
-
-include_once '../footer.php';
-
-
-?>
+  include_once '../footer.php';
 

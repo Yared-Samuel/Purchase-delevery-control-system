@@ -3,16 +3,54 @@ include_once '../includes/session.php';
 include_once '../includes/connection.php';
 include_once '../includes/functions.php';
 
-if (isset($_POST["submit"])) {
+if(isset($_POST['submit'])) {
   $username = $_POST["username"];
   $password = $_POST["password"];
-  if(empty($username) || empty($password)){
-    redirect_to("login.php");
-  }else{
-    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+  
+    $sql = "SELECT * FROM user_tbl WHERE username='$username' AND password='$password' LIMIT 1";
+    
+    $result = $GLOBALS['mysqli']->query($sql);
+    if($result->num_rows > 0){
+    $row = mysqli_fetch_assoc($result);
+    session_regenerate_id();
+    $_SESSION['username'] = $row['username'];
+    $_SESSION['role'] = $row['role'];
+    session_write_close();
+
+    if($result->num_rows==1 && $_SESSION['role']=="report"){
+       header("location:del_daily_report.php");
+    }
+    elseif ($result->num_rows==1 && $_SESSION['role']=="admin") {
+      header("location:add_payment.php");
+    }else {
+      echo  '<script type="text/javascript" >
+                          jQuery(function validation(){
+              
+                    swal({
+                      title: "Error!",
+                      text: "Password or usename is Incorrect!",
+                      icon: "error",
+                      button: "ok",
+                    });
+                  });        
+                          </script>';
+    }
+
     
     
   }
+}else {
+  echo  '<script type="text/javascript" >
+                          jQuery(function validation(){
+              
+                    swal({
+                      title: "Error!",
+                      text: "Password or usename not found!",
+                      icon: "error",
+                      button: "ok",
+                    });
+                  });        
+                          </script>';
 }
 ?>
 
@@ -54,7 +92,7 @@ if (isset($_POST["submit"])) {
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="#" method="post">
+    <form action="#" method="POST">
       <div class="form-group has-feedback">
 
         <input type="text" class="form-control" placeholder="user name" name="username">
