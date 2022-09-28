@@ -41,7 +41,7 @@ include_once '../header.php';
         ?>
 </div>
   <div class="box box-info"></div>
-        <table id="deleverytbl" class="table table-sm hover cell-border compact stripe display"  >
+        <table id="detail" class="table table-sm hover cell-border compact stripe display"  >
   <thead style="background-color: gray; font-size: 115%; color: white;">
               <tr>
                 <th>#</th>
@@ -59,11 +59,11 @@ include_once '../header.php';
               while ($rows = mysqli_fetch_assoc($result)) {
                 ?>
               <tr>
-                <td style="background-color: black; font-size: 115%; color: white;" ><?php echo $count; ?></td>
-                <td style="background-color: black; font-size: 115%; color: white;" ><?php echo $rows['item_name']; ?></td>
-                <td style="background-color: black; font-size: 115%; color: white;"><?php echo $rows['del_qty']; ?></td>                
-                <td style="background-color: black; font-size: 115%; color: white;"><?php echo $rows['del_date']; ?></td>
-                <td style="background-color: black; font-size: 115%; color: white;"><?php echo $rows['del_ref']; ?></td>
+                <td style="font-size: 115%; color: purple;" ><?php echo $count; ?></td>
+                <td style="font-size: 115%; color: purple;" ><?php echo $rows['item_name']; ?></td>
+                <td style="font-size: 115%; color: purple;"><?php echo $rows['del_qty']; ?></td>                
+                <td style="font-size: 115%; color: purple;"><?php echo $rows['del_date']; ?></td>
+                <td style="font-size: 115%; color: purple;"><?php echo $rows['del_ref']; ?></td>
               </tr>
               <?php
               $count++;
@@ -90,11 +90,19 @@ include_once '../header.php';
 </div>
 
 <script>
-
 $(document).ready( function () {
-    $('#table_id').DataTable();
+    $('#detail').DataTable( {
+        dom: 'lBfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    }
+      
+      
+  
+    );
+    
 } );
-
 </script>
 
 
