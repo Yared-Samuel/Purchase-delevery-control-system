@@ -1,15 +1,15 @@
 <?php
-ob_start();
+//ob_start();
 include_once '../includes/session.php';
 include_once '../header.php';
 include_once '../includes/connection.php';
 include_once '../includes/functions.php';
 
-if (!isset($_SESSION['username']) || $_SESSION['role'] != "admin") {
-  header("location:../index.php");
-}
+// if (!isset($_SESSION['username']) || $_SESSION['role'] != "admin") {
+//   header("location:../index.php");
+// }
 add_payment(); 
-ob_end_flush();
+//ob_end_flush();
 ?>
 
 
