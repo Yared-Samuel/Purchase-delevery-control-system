@@ -35,6 +35,9 @@ edit_payment($pay_id);
       -------------------------->
 
       <div class="box box-warning">
+      <div class="text-right">
+      <a href="add_payment.php"><button type="button" class="btn btn-outline-info"><i class="fa fa-backward" aria-hidden="true"></i>         Back</button></a>
+      </div>
       <div class="card">
   <!-- <div class="card-header text-blue">
   <h3>Delevery Form</h3>
