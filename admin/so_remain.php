@@ -35,7 +35,7 @@ include_once '../header.php';
 
 
 
-<div class="box box-info">
+<div class="box box-info" style="overflow-x: auto; white-space: nowrap;">
 <a href="reorder.php">
 <button type="button" class="btn btn-warning active" aria-pressed="true">Adjusted Sales Orders</button>
 </a>
