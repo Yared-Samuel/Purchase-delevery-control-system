@@ -42,7 +42,7 @@ include_once '../header.php';
 <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> Partialy Delevered Sales Orders</div>
 
   <div class="box box-info"></div>
-        <table id="so_rem" class="table table-sm hover cell-border compact stripe display"  >
+        <table id="so_rem" class="table table-sm hover cell-border compact stripe display" style="overflow-x: scroll;"  >
   <thead style="background-color: gray; font-size: 100%; color: white;">
               <tr>
                 <th>#</th>
@@ -98,7 +98,7 @@ include_once '../header.php';
       </div>
 
 
-      <div class="box box-info">
+      <div class="box box-info" style="overflow-x: scroll;">
       <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> New Sales Orders</div>
       <div class="box box-info"></div>
       <table id="so_rem" class="table table-sm hover cell-border compact stripe display"  >

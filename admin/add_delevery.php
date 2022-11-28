@@ -155,7 +155,7 @@ add_delevery();
 
 
 
-<div class="box box-info">
+<div class="box box-info" style="overflow-x: scroll;">
 <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> Delevered Products</div>
   <div class="box box-info"></div>
         <table id="deleverytbl" class="table table-sm hover cell-border compact stripe display nowrap">

@@ -143,7 +143,7 @@ add_payment();
 
 
 
-<div class="box box-info">
+<div class="col-sm-2 box box-info" style="overflow-x: scroll;">
 <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> Delevered Products</div>
   <div class="box box-info"></div>
         <table id="paytbl" class="display table table-sm hover cell-border compact stripe
