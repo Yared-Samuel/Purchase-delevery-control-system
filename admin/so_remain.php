@@ -101,7 +101,7 @@ include_once '../header.php';
       <div class="box box-info" style="overflow-x: scroll;">
       <div class="box-header"  style="background-color:ivory; font-size: 120%; color: black;"> New Sales Orders</div>
       <div class="box box-info"></div>
-      <table id="so_rem" class="table table-sm hover cell-border compact stripe display"  >
+      <table id="so_rem_new" class="table table-sm hover cell-border compact stripe display"  >
         <thead style="background-color: gray; font-size: 100%; color: white;">
               <tr>
                 <th class="col-md-2">#</th>
@@ -159,6 +159,19 @@ include_once '../header.php';
 <script>
 $(document).ready( function () {
     $('#so_rem').DataTable( {
+        dom: 'lBfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    }
+      
+      
+  
+    );
+    
+} );
+$(document).ready( function () {
+    $('#so_rem_new').DataTable( {
         dom: 'lBfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'

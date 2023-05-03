@@ -61,10 +61,15 @@ return $result;
  function add_payment()
  {
 
+  $year_current = date("Y");
+  
+  
+  
+
       if (isset($_POST['pay'])) {
         $pay_date=$_POST['pay_date'];
         $item_id=$_POST['item_id'];
-        $pay_so=$_POST['pay_so'];
+        $pay_so=$year_current."00".$_POST['pay_so'];
         $pay_qty=$_POST['pay_qty'];
         $pay_site=$_POST['pay_site'];
         $ck_num=$_POST['ck_num'];
